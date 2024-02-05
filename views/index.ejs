@@ -1,0 +1,35 @@
+<%- include("partials/header.ejs") %>
+
+<h1>One Post at a Time!</h1>
+
+<p>Create Post and Read: Your hub for literary adventures! Unleash your imagination, craft stories, and dive into a universe of endless tales. Join us in sharing and discovering captivating narratives today!</p>
+
+<a class="create-button no-underline" href="/redirect-to-create"><span>Create</span></a>
+
+<div class="container">
+  <% if (posts.length > 0) { %>
+    <% posts.forEach(post => { %>
+      <% console.log("postN:"+post.id)%>
+      <div class="post-item">
+        <div class="post-header">
+          <div>
+            <strong class="post-title"><%= post.title %></strong>
+            <p class="post-date"><%= post.date %></p>
+            <%=console.log(post.date)%>
+          </div>
+          <div class="post-buttons">
+            <a class="edit-button" href="/edit/<%= post.id %>">Edit</a>
+            <a class="delete-button" href="/delete/<%= post.id %>">Delete</a>
+          </div>
+        </div>
+        <p class="post-content"><%= post.text %></p>
+        <p class="post-author">By <%= post.name %></p>
+      </div>
+    <% }); %>
+  <% } else { %>
+    <p class="no-posts-message">No posts available yet.</p>
+  <% } %>
+</div>
+
+
+<%- include("partials/footer.ejs") %>

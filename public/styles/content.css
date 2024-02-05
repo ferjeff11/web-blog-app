@@ -1,0 +1,183 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header,
+footer {
+  flex: 0 0 auto;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+h1 {
+  text-align: center;
+}
+
+p {
+  color: grey;
+}
+
+.profile {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 20px;
+}
+form {
+  margin-top: 50px;
+}
+
+.feedback-input {
+  color: rgb(20, 19, 19);
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 2px solid #3586ff;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.feedback-input:focus {
+  border: 2px solid #3586ff;
+}
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+[type="submit"] {
+  width: 100%;
+  background: #3586ff;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+}
+[type="submit"]:hover {
+  background: #3586ff;
+  text-decoration: none;
+}
+
+.no-underline{
+  text-decoration: none;
+  cursor: pointer; /* Esto cambia el cursor al pasar sobre el botón */
+}
+
+/* estilo boton */
+.create-button {
+  border: 0;
+  background-image: linear-gradient(150deg, #9500ff, #09f, #00DDFF);
+  border-radius: 8px;
+  color: aliceblue;
+  display: flex;
+  font-size: 18px;
+  padding: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.create-button span {
+  background-color: rgb(31, 30, 30);
+  padding: 16px 24px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.create-button:hover span {
+  background-color: transparent; /* o simplemente elimina esta línea */  
+  text-decoration: none;
+}
+
+.create-button:active {
+  transform: scale(0.9);
+}
+
+/* Estilo POST */
+
+.post-item {
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.post-title {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.post-date {
+  font-size: 0.8em;
+  color: #777;
+}
+
+.post-content {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.post-author {
+  font-size: 1.2em;
+  color: #555;
+}
+
+.post-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-button,
+.delete-button {
+  background-color: #ffcc00;
+  color: #333;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+  background-color: #e6b800;
+  text-decoration: none;
+}
+
+.edit-form {
+  margin-top: 100px; /* Puedes ajustar según sea necesario */
+  /* Agrega cualquier otro estilo específico necesario para el formulario de edición */
+}
